@@ -40,7 +40,7 @@
 			Este &eacute; um exemplo de utiliza&ccedil;&atilde;o do sistema que
 			busca matchs de produtos do cliente em um banco de dados com os produtos concorrentes.
 		</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Ver no GitHub</a></p>
+        <p><a class="btn btn-lg btn-success" href="https://github.com/markusbeck/matcher" role="button">Ver no GitHub</a></p>
       </div>
 
       <div id="product-list" class="row marketing">
@@ -83,8 +83,24 @@
 					<h4 class="modal-title" id="AboutModalLabel">Sum&aacute;rio</h4>
 				</div>
 				<div class="modal-body">
-				  	<h4><small>Porcentagem de acertos:</small> 69,78%</h4>
-					<h4><small>Porcentagem de erros:</small> 30.22%</h4>
+					<p>
+						Este sistema simples foi feito como um teste de engenharia de software.
+						Seu c&oacute;digo fonte est&aacute; dispon&iacute;vel no <a href="https://github.com/markusbeck/matcher">GitHub</a>.
+					</p>
+					
+					<hr>
+					<h4>Solution description</h4>
+					<p>Using the <strong>Laravel PHP Framework</strong> as a base, I've created a simple <em>REST service</em> which receives the product and compares it by the title similarity, using the PHP functions <em>similar_text</em> and <em>levenshtein</em>.</p>
+					<p>First the algorithm breaks the product title and compares each word with the competitor's product's title using <em>similar_text</em> function. This phase accepts only 100% word matches to calculate a percentage of similarity of the titles, I call it <em>similarity by word</em>. </p>
+					<p>Then it compares the whole title similarity using the <em>similar_text</em> function. A product can passes this phase if it have until 65% of similarity.</p>
+					<p>The last step is to get only the results which passes the tests of <em>similarity by word</em> and <em>similarity by whole title</em> and sort it using the data of <em>similarity by word</em>, <em>levenshtein</em> and <em>similar_text</em>, resulting in the better match to the product.</p>
+					
+					<hr>
+					<p>
+						Veja os dados de acerto do algorítmo:
+					</p>
+				  	<h4><small>Acertos:</small> 69,78%</h4>
+					<h4><small>Erros:</small> 30.22%</h4>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
