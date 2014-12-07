@@ -21,3 +21,5 @@ First the algorithm breaks the product title and compares each word with the com
 Then it compares the whole title similarity using the *similar_text* function. A product can passes this phase if it have until 65% of similarity.
 
 The last step is to get only the results which passes the tests of *similarity by word* and *similarity by whole title* and sort it using the data of *similarity by word*, *levenshtein* and *similar_text*, resulting in the better match to the product.
+
+*See functional version at http://mbeck.com.br/matcher/*
